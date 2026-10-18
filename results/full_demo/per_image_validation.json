@@ -1,0 +1,908 @@
+{
+  "P1": [
+    {
+      "image_id": "0b6610032bbd477493210fe0a47fe48a__n008-2018-06-05-15-07-28-0400__CAM_BACK_LEFT__1528225921947295",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9135514873583686,
+      "pred_area": 77059,
+      "gold_area": 79835,
+      "attempts": 1,
+      "seconds": 0.621
+    },
+    {
+      "image_id": "17b5b75a348f4d30b89f515d66b594fc__n003-2018-01-05-16-53-19+0800__CAM_FRONT__1515142445323948",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.8214715719063546,
+      "pred_area": 12564,
+      "gold_area": 14667,
+      "attempts": 1,
+      "seconds": 0.538
+    },
+    {
+      "image_id": "22dfa99e8ec84e47bf0eecd1ca297239__n013-2018-08-20-11-35-39+0800__CAM_FRONT_LEFT__1534736337504825",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9758031369741326,
+      "pred_area": 368056,
+      "gold_area": 377049,
+      "attempts": 1,
+      "seconds": 0.69
+    },
+    {
+      "image_id": "33f7d4ebb62e4425a4579dc908132315__n008-2018-06-05-15-07-28-0400__CAM_FRONT_RIGHT__1528226064419956",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9624626341861596,
+      "pred_area": 430417,
+      "gold_area": 444702,
+      "attempts": 1,
+      "seconds": 0.614
+    },
+    {
+      "image_id": "439ba1940f254ddb9bfb5a19d383eed1__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226103037570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.8155168600793826,
+      "pred_area": 142220,
+      "gold_area": 169733,
+      "attempts": 1,
+      "seconds": 0.663
+    },
+    {
+      "image_id": "5f6630c1b90e41b3b2eb0fc87c887f5b__n003-2018-01-04-10-22-36+0800__CAM_BACK__1515033093558165",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.734132581100141,
+      "pred_area": 1331,
+      "gold_area": 1128,
+      "attempts": 1,
+      "seconds": 0.528
+    },
+    {
+      "image_id": "666c886453ca4b91931b3c0a357cd997__n016-2018-09-10-12-02-56+0800__CAM_FRONT_RIGHT__1536552679020471",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.8245183290707587,
+      "pred_area": 26338,
+      "gold_area": 27166,
+      "attempts": 1,
+      "seconds": 0.615
+    },
+    {
+      "image_id": "7ab3fce797d84b87b186b20c5922c01e__n008-2018-06-05-15-07-28-0400__CAM_FRONT_RIGHT__1528226004419956",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9273476477913589,
+      "pred_area": 235451,
+      "gold_area": 250522,
+      "attempts": 1,
+      "seconds": 0.589
+    },
+    {
+      "image_id": "a0f7494834bd493c86388fb3e9d47d26__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226429187570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.923348118153731,
+      "pred_area": 325856,
+      "gold_area": 331529,
+      "attempts": 1,
+      "seconds": 0.721
+    },
+    {
+      "image_id": "aadd81bcb6fe4a719ad819da5dca5d7f__n013-2018-08-20-11-35-39+0800__CAM_FRONT_LEFT__1534736873504825",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9614756406646016,
+      "pred_area": 17324,
+      "gold_area": 17502,
+      "attempts": 1,
+      "seconds": 0.52
+    },
+    {
+      "image_id": "d098107be24a45cd8b5ced55c8ae54eb__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736828937005",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9137521588946459,
+      "pred_area": 17492,
+      "gold_area": 17966,
+      "attempts": 1,
+      "seconds": 0.593
+    },
+    {
+      "image_id": "f08298d5ef784a068863aea8cb3839bb__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528225872287570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9440307362460209,
+      "pred_area": 231949,
+      "gold_area": 243176,
+      "attempts": 1,
+      "seconds": 0.635
+    },
+    {
+      "image_id": "0533f2b98ce042e6a0ec01378c2d112a__n003-2018-01-04-10-22-36+0800__CAM_BACK_LEFT__1515032642314708",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8999495119488388,
+      "pred_area": 67397,
+      "gold_area": 68077,
+      "attempts": 1,
+      "seconds": 1.573
+    },
+    {
+      "image_id": "0bb45f45e895403282d93e9d43fb118b__n003-2018-01-05-16-53-19+0800__CAM_FRONT__1515142692665681",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9606059227584952,
+      "pred_area": 108268,
+      "gold_area": 107232,
+      "attempts": 1,
+      "seconds": 0.596
+    },
+    {
+      "image_id": "147338e1600846e4a2e850f1f54c7dc7__n003-2018-01-04-10-22-36+0800__CAM_FRONT__1515033021829142",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.953498045087763,
+      "pred_area": 23234,
+      "gold_area": 23732,
+      "attempts": 1,
+      "seconds": 0.545
+    },
+    {
+      "image_id": "2a63bc64ac1349c7b8cfe29a3b694078__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736520137005",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9672279558211118,
+      "pred_area": 16276,
+      "gold_area": 16319,
+      "attempts": 1,
+      "seconds": 0.513
+    },
+    {
+      "image_id": "2f445c36ff9845da9326efbd400608a6__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736908137005",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8420490928495198,
+      "pred_area": 3198,
+      "gold_area": 3706,
+      "attempts": 1,
+      "seconds": 0.546
+    },
+    {
+      "image_id": "2fa3f02a571a4d8bb108a7a293c7dd5c__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528225942287570",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9436842105263158,
+      "pred_area": 122152,
+      "gold_area": 121586,
+      "attempts": 1,
+      "seconds": 0.637
+    },
+    {
+      "image_id": "4278934a86644548886a1c8e1a1c7556__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528225862112465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.10007104138890781,
+      "pred_area": 102437,
+      "gold_area": 10603,
+      "attempts": 1,
+      "seconds": 0.584
+    },
+    {
+      "image_id": "587396eea6c246f4ab749ed1ea39289d__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528226165412465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9440102483340581,
+      "pred_area": 162706,
+      "gold_area": 168114,
+      "attempts": 1,
+      "seconds": 0.699
+    },
+    {
+      "image_id": "6caaaa6b953447b79f2d3db616278451__n003-2018-01-04-10-22-36+0800__CAM_BACK__1515032922134606",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9472522178957087,
+      "pred_area": 24359,
+      "gold_area": 24149,
+      "attempts": 1,
+      "seconds": 0.525
+    },
+    {
+      "image_id": "71718b5c134140e7aee89ae29de89a66__n008-2018-09-14-14-02-31-0400__CAM_FRONT_LEFT__1536948955354799",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9607035133183228,
+      "pred_area": 91431,
+      "gold_area": 93181,
+      "attempts": 1,
+      "seconds": 0.598
+    },
+    {
+      "image_id": "807b3f09b7314bb2bb43d4138384a810__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528226034362465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.532588493795591,
+      "pred_area": 127553,
+      "gold_area": 234449,
+      "attempts": 1,
+      "seconds": 0.678
+    },
+    {
+      "image_id": "937502d3c9f749ab8c19f2fc45c5e24a__n013-2018-08-20-11-35-39+0800__CAM_FRONT_RIGHT__1534736735170176",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9827719096793476,
+      "pred_area": 249976,
+      "gold_area": 254231,
+      "attempts": 1,
+      "seconds": 0.564
+    },
+    {
+      "image_id": "a0a75925fb744a7bbea535ef5bcecb84__n003-2018-01-04-10-22-36+0800__CAM_FRONT_LEFT__1515033144794774",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9608941488633612,
+      "pred_area": 92036,
+      "gold_area": 94196,
+      "attempts": 1,
+      "seconds": 0.593
+    },
+    {
+      "image_id": "c259ae03fb3441df8265ec5ede1527fd__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226610537570",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8471326001999455,
+      "pred_area": 10885,
+      "gold_area": 9439,
+      "attempts": 1,
+      "seconds": 0.547
+    },
+    {
+      "image_id": "d0ebbcb49cca40eab76939482e73843f__n003-2018-01-04-10-22-36+0800__CAM_FRONT__1515032765653023",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.0,
+      "pred_area": 0,
+      "gold_area": 296,
+      "attempts": 1,
+      "seconds": 0.522
+    },
+    {
+      "image_id": "e8f6662e34034be7867bc65b77754bb1__n008-2018-06-05-15-07-28-0400__CAM_BACK_LEFT__1528225821947295",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.3223203995389935,
+      "pred_area": 946,
+      "gold_area": 2496,
+      "attempts": 1,
+      "seconds": 0.548
+    },
+    {
+      "image_id": "f14769a2d524464ab5581f841f13ba90__n008-2018-06-05-15-07-28-0400__CAM_BACK_RIGHT__1528225994027968",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9224932563457967,
+      "pred_area": 390043,
+      "gold_area": 406048,
+      "attempts": 1,
+      "seconds": 0.702
+    },
+    {
+      "image_id": "fb31a93f4e654f338461d6ceb83b087c__n003-2018-01-04-10-22-36+0800__CAM_BACK_RIGHT__1515032640763933",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9017526536657615,
+      "pred_area": 23039,
+      "gold_area": 23185,
+      "attempts": 1,
+      "seconds": 0.545
+    }
+  ],
+  "P2": [
+    {
+      "image_id": "0b6610032bbd477493210fe0a47fe48a__n008-2018-06-05-15-07-28-0400__CAM_BACK_LEFT__1528225921947295",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9135514873583686,
+      "pred_area": 77059,
+      "gold_area": 79835,
+      "attempts": 1,
+      "seconds": 0.621
+    },
+    {
+      "image_id": "17b5b75a348f4d30b89f515d66b594fc__n003-2018-01-05-16-53-19+0800__CAM_FRONT__1515142445323948",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.8214715719063546,
+      "pred_area": 12564,
+      "gold_area": 14667,
+      "attempts": 1,
+      "seconds": 0.538
+    },
+    {
+      "image_id": "22dfa99e8ec84e47bf0eecd1ca297239__n013-2018-08-20-11-35-39+0800__CAM_FRONT_LEFT__1534736337504825",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9758031369741326,
+      "pred_area": 368056,
+      "gold_area": 377049,
+      "attempts": 1,
+      "seconds": 0.69
+    },
+    {
+      "image_id": "33f7d4ebb62e4425a4579dc908132315__n008-2018-06-05-15-07-28-0400__CAM_FRONT_RIGHT__1528226064419956",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9624626341861596,
+      "pred_area": 430417,
+      "gold_area": 444702,
+      "attempts": 1,
+      "seconds": 0.614
+    },
+    {
+      "image_id": "439ba1940f254ddb9bfb5a19d383eed1__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226103037570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.8155168600793826,
+      "pred_area": 142220,
+      "gold_area": 169733,
+      "attempts": 1,
+      "seconds": 0.663
+    },
+    {
+      "image_id": "5f6630c1b90e41b3b2eb0fc87c887f5b__n003-2018-01-04-10-22-36+0800__CAM_BACK__1515033093558165",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.734132581100141,
+      "pred_area": 1331,
+      "gold_area": 1128,
+      "attempts": 1,
+      "seconds": 0.528
+    },
+    {
+      "image_id": "666c886453ca4b91931b3c0a357cd997__n016-2018-09-10-12-02-56+0800__CAM_FRONT_RIGHT__1536552679020471",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.8245183290707587,
+      "pred_area": 26338,
+      "gold_area": 27166,
+      "attempts": 1,
+      "seconds": 0.615
+    },
+    {
+      "image_id": "7ab3fce797d84b87b186b20c5922c01e__n008-2018-06-05-15-07-28-0400__CAM_FRONT_RIGHT__1528226004419956",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9273476477913589,
+      "pred_area": 235451,
+      "gold_area": 250522,
+      "attempts": 1,
+      "seconds": 0.589
+    },
+    {
+      "image_id": "a0f7494834bd493c86388fb3e9d47d26__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226429187570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.923348118153731,
+      "pred_area": 325856,
+      "gold_area": 331529,
+      "attempts": 1,
+      "seconds": 0.721
+    },
+    {
+      "image_id": "aadd81bcb6fe4a719ad819da5dca5d7f__n013-2018-08-20-11-35-39+0800__CAM_FRONT_LEFT__1534736873504825",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9614756406646016,
+      "pred_area": 17324,
+      "gold_area": 17502,
+      "attempts": 1,
+      "seconds": 0.52
+    },
+    {
+      "image_id": "d098107be24a45cd8b5ced55c8ae54eb__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736828937005",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9137521588946459,
+      "pred_area": 17492,
+      "gold_area": 17966,
+      "attempts": 1,
+      "seconds": 0.593
+    },
+    {
+      "image_id": "f08298d5ef784a068863aea8cb3839bb__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528225872287570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9440307362460209,
+      "pred_area": 231949,
+      "gold_area": 243176,
+      "attempts": 1,
+      "seconds": 0.635
+    },
+    {
+      "image_id": "0533f2b98ce042e6a0ec01378c2d112a__n003-2018-01-04-10-22-36+0800__CAM_BACK_LEFT__1515032642314708",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8999495119488388,
+      "pred_area": 67397,
+      "gold_area": 68077,
+      "attempts": 1,
+      "seconds": 1.573
+    },
+    {
+      "image_id": "0bb45f45e895403282d93e9d43fb118b__n003-2018-01-05-16-53-19+0800__CAM_FRONT__1515142692665681",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9606059227584952,
+      "pred_area": 108268,
+      "gold_area": 107232,
+      "attempts": 1,
+      "seconds": 0.596
+    },
+    {
+      "image_id": "147338e1600846e4a2e850f1f54c7dc7__n003-2018-01-04-10-22-36+0800__CAM_FRONT__1515033021829142",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.953498045087763,
+      "pred_area": 23234,
+      "gold_area": 23732,
+      "attempts": 1,
+      "seconds": 0.545
+    },
+    {
+      "image_id": "2a63bc64ac1349c7b8cfe29a3b694078__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736520137005",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9672279558211118,
+      "pred_area": 16276,
+      "gold_area": 16319,
+      "attempts": 1,
+      "seconds": 0.513
+    },
+    {
+      "image_id": "2f445c36ff9845da9326efbd400608a6__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736908137005",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8420490928495198,
+      "pred_area": 3198,
+      "gold_area": 3706,
+      "attempts": 1,
+      "seconds": 0.546
+    },
+    {
+      "image_id": "2fa3f02a571a4d8bb108a7a293c7dd5c__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528225942287570",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9436842105263158,
+      "pred_area": 122152,
+      "gold_area": 121586,
+      "attempts": 1,
+      "seconds": 0.637
+    },
+    {
+      "image_id": "4278934a86644548886a1c8e1a1c7556__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528225862112465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.10007104138890781,
+      "pred_area": 102437,
+      "gold_area": 10603,
+      "attempts": 1,
+      "seconds": 0.584
+    },
+    {
+      "image_id": "587396eea6c246f4ab749ed1ea39289d__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528226165412465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9440102483340581,
+      "pred_area": 162706,
+      "gold_area": 168114,
+      "attempts": 1,
+      "seconds": 0.699
+    },
+    {
+      "image_id": "6caaaa6b953447b79f2d3db616278451__n003-2018-01-04-10-22-36+0800__CAM_BACK__1515032922134606",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9472522178957087,
+      "pred_area": 24359,
+      "gold_area": 24149,
+      "attempts": 1,
+      "seconds": 0.525
+    },
+    {
+      "image_id": "71718b5c134140e7aee89ae29de89a66__n008-2018-09-14-14-02-31-0400__CAM_FRONT_LEFT__1536948955354799",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9607035133183228,
+      "pred_area": 91431,
+      "gold_area": 93181,
+      "attempts": 1,
+      "seconds": 0.598
+    },
+    {
+      "image_id": "807b3f09b7314bb2bb43d4138384a810__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528226034362465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.532588493795591,
+      "pred_area": 127553,
+      "gold_area": 234449,
+      "attempts": 1,
+      "seconds": 0.678
+    },
+    {
+      "image_id": "937502d3c9f749ab8c19f2fc45c5e24a__n013-2018-08-20-11-35-39+0800__CAM_FRONT_RIGHT__1534736735170176",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9827719096793476,
+      "pred_area": 249976,
+      "gold_area": 254231,
+      "attempts": 1,
+      "seconds": 0.564
+    },
+    {
+      "image_id": "a0a75925fb744a7bbea535ef5bcecb84__n003-2018-01-04-10-22-36+0800__CAM_FRONT_LEFT__1515033144794774",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9608941488633612,
+      "pred_area": 92036,
+      "gold_area": 94196,
+      "attempts": 1,
+      "seconds": 0.593
+    },
+    {
+      "image_id": "c259ae03fb3441df8265ec5ede1527fd__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226610537570",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8471326001999455,
+      "pred_area": 10885,
+      "gold_area": 9439,
+      "attempts": 1,
+      "seconds": 0.547
+    },
+    {
+      "image_id": "d0ebbcb49cca40eab76939482e73843f__n003-2018-01-04-10-22-36+0800__CAM_FRONT__1515032765653023",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.0,
+      "pred_area": 0,
+      "gold_area": 296,
+      "attempts": 1,
+      "seconds": 0.522
+    },
+    {
+      "image_id": "e8f6662e34034be7867bc65b77754bb1__n008-2018-06-05-15-07-28-0400__CAM_BACK_LEFT__1528225821947295",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.3223203995389935,
+      "pred_area": 946,
+      "gold_area": 2496,
+      "attempts": 1,
+      "seconds": 0.548
+    },
+    {
+      "image_id": "f14769a2d524464ab5581f841f13ba90__n008-2018-06-05-15-07-28-0400__CAM_BACK_RIGHT__1528225994027968",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9224932563457967,
+      "pred_area": 390043,
+      "gold_area": 406048,
+      "attempts": 1,
+      "seconds": 0.702
+    },
+    {
+      "image_id": "fb31a93f4e654f338461d6ceb83b087c__n003-2018-01-04-10-22-36+0800__CAM_BACK_RIGHT__1515032640763933",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9017526536657615,
+      "pred_area": 23039,
+      "gold_area": 23185,
+      "attempts": 1,
+      "seconds": 0.545
+    }
+  ],
+  "baseline": [
+    {
+      "image_id": "0b6610032bbd477493210fe0a47fe48a__n008-2018-06-05-15-07-28-0400__CAM_BACK_LEFT__1528225921947295",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9076892932805937,
+      "pred_area": 75945,
+      "gold_area": 79835,
+      "attempts": 1,
+      "seconds": 0.63
+    },
+    {
+      "image_id": "17b5b75a348f4d30b89f515d66b594fc__n003-2018-01-05-16-53-19+0800__CAM_FRONT__1515142445323948",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.8182978437562974,
+      "pred_area": 12402,
+      "gold_area": 14667,
+      "attempts": 1,
+      "seconds": 0.539
+    },
+    {
+      "image_id": "22dfa99e8ec84e47bf0eecd1ca297239__n013-2018-08-20-11-35-39+0800__CAM_FRONT_LEFT__1534736337504825",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.968465887994229,
+      "pred_area": 365165,
+      "gold_area": 377049,
+      "attempts": 1,
+      "seconds": 0.601
+    },
+    {
+      "image_id": "33f7d4ebb62e4425a4579dc908132315__n008-2018-06-05-15-07-28-0400__CAM_FRONT_RIGHT__1528226064419956",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9537717480057786,
+      "pred_area": 426266,
+      "gold_area": 444702,
+      "attempts": 1,
+      "seconds": 0.622
+    },
+    {
+      "image_id": "439ba1940f254ddb9bfb5a19d383eed1__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226103037570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.7977556984219755,
+      "pred_area": 137863,
+      "gold_area": 169733,
+      "attempts": 1,
+      "seconds": 0.656
+    },
+    {
+      "image_id": "5f6630c1b90e41b3b2eb0fc87c887f5b__n003-2018-01-04-10-22-36+0800__CAM_BACK__1515033093558165",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.0,
+      "pred_area": 0,
+      "gold_area": 1128,
+      "attempts": 1,
+      "seconds": 0.519
+    },
+    {
+      "image_id": "666c886453ca4b91931b3c0a357cd997__n016-2018-09-10-12-02-56+0800__CAM_FRONT_RIGHT__1536552679020471",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.8252112224163132,
+      "pred_area": 24033,
+      "gold_area": 27166,
+      "attempts": 1,
+      "seconds": 0.591
+    },
+    {
+      "image_id": "7ab3fce797d84b87b186b20c5922c01e__n008-2018-06-05-15-07-28-0400__CAM_FRONT_RIGHT__1528226004419956",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9164595952779785,
+      "pred_area": 232284,
+      "gold_area": 250522,
+      "attempts": 1,
+      "seconds": 0.613
+    },
+    {
+      "image_id": "a0f7494834bd493c86388fb3e9d47d26__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226429187570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9080853274150327,
+      "pred_area": 314999,
+      "gold_area": 331529,
+      "attempts": 1,
+      "seconds": 0.651
+    },
+    {
+      "image_id": "aadd81bcb6fe4a719ad819da5dca5d7f__n013-2018-08-20-11-35-39+0800__CAM_FRONT_LEFT__1534736873504825",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9580225988700565,
+      "pred_area": 17155,
+      "gold_area": 17502,
+      "attempts": 1,
+      "seconds": 0.528
+    },
+    {
+      "image_id": "d098107be24a45cd8b5ced55c8ae54eb__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736828937005",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.907689803006458,
+      "pred_area": 17187,
+      "gold_area": 17966,
+      "attempts": 1,
+      "seconds": 0.595
+    },
+    {
+      "image_id": "f08298d5ef784a068863aea8cb3839bb__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528225872287570",
+      "case": "far_small",
+      "split": "validation",
+      "iou": 0.9299840928844356,
+      "pred_area": 227578,
+      "gold_area": 243176,
+      "attempts": 1,
+      "seconds": 0.621
+    },
+    {
+      "image_id": "0533f2b98ce042e6a0ec01378c2d112a__n003-2018-01-04-10-22-36+0800__CAM_BACK_LEFT__1515032642314708",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8958923014096011,
+      "pred_area": 66556,
+      "gold_area": 68077,
+      "attempts": 1,
+      "seconds": 0.67
+    },
+    {
+      "image_id": "0bb45f45e895403282d93e9d43fb118b__n003-2018-01-05-16-53-19+0800__CAM_FRONT__1515142692665681",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9548699875830837,
+      "pred_area": 106881,
+      "gold_area": 107232,
+      "attempts": 1,
+      "seconds": 0.579
+    },
+    {
+      "image_id": "147338e1600846e4a2e850f1f54c7dc7__n003-2018-01-04-10-22-36+0800__CAM_FRONT__1515033021829142",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9517226978492378,
+      "pred_area": 23002,
+      "gold_area": 23732,
+      "attempts": 1,
+      "seconds": 0.536
+    },
+    {
+      "image_id": "2a63bc64ac1349c7b8cfe29a3b694078__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736520137005",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9614824699745238,
+      "pred_area": 16018,
+      "gold_area": 16319,
+      "attempts": 1,
+      "seconds": 0.517
+    },
+    {
+      "image_id": "2f445c36ff9845da9326efbd400608a6__n013-2018-08-20-11-35-39+0800__CAM_BACK__1534736908137005",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8313285217856188,
+      "pred_area": 3145,
+      "gold_area": 3706,
+      "attempts": 1,
+      "seconds": 0.539
+    },
+    {
+      "image_id": "2fa3f02a571a4d8bb108a7a293c7dd5c__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528225942287570",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.947235487119514,
+      "pred_area": 118181,
+      "gold_area": 121586,
+      "attempts": 1,
+      "seconds": 0.584
+    },
+    {
+      "image_id": "4278934a86644548886a1c8e1a1c7556__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528225862112465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.10120002376284679,
+      "pred_area": 100616,
+      "gold_area": 10603,
+      "attempts": 1,
+      "seconds": 0.589
+    },
+    {
+      "image_id": "587396eea6c246f4ab749ed1ea39289d__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528226165412465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.930015359168242,
+      "pred_area": 158599,
+      "gold_area": 168114,
+      "attempts": 1,
+      "seconds": 0.65
+    },
+    {
+      "image_id": "6caaaa6b953447b79f2d3db616278451__n003-2018-01-04-10-22-36+0800__CAM_BACK__1515032922134606",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9638702782687328,
+      "pred_area": 23630,
+      "gold_area": 24149,
+      "attempts": 1,
+      "seconds": 0.561
+    },
+    {
+      "image_id": "71718b5c134140e7aee89ae29de89a66__n008-2018-09-14-14-02-31-0400__CAM_FRONT_LEFT__1536948955354799",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.954697414931221,
+      "pred_area": 90412,
+      "gold_area": 93181,
+      "attempts": 1,
+      "seconds": 0.595
+    },
+    {
+      "image_id": "807b3f09b7314bb2bb43d4138384a810__n008-2018-06-05-15-07-28-0400__CAM_FRONT__1528226034362465",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.5216592761392962,
+      "pred_area": 123462,
+      "gold_area": 234449,
+      "attempts": 1,
+      "seconds": 0.637
+    },
+    {
+      "image_id": "937502d3c9f749ab8c19f2fc45c5e24a__n013-2018-08-20-11-35-39+0800__CAM_FRONT_RIGHT__1534736735170176",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.0,
+      "pred_area": 0,
+      "gold_area": 254231,
+      "attempts": 1,
+      "seconds": 0.515
+    },
+    {
+      "image_id": "a0a75925fb744a7bbea535ef5bcecb84__n003-2018-01-04-10-22-36+0800__CAM_FRONT_LEFT__1515033144794774",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9539115126342754,
+      "pred_area": 91154,
+      "gold_area": 94196,
+      "attempts": 1,
+      "seconds": 0.631
+    },
+    {
+      "image_id": "c259ae03fb3441df8265ec5ede1527fd__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226610537570",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.8598502357400388,
+      "pred_area": 10679,
+      "gold_area": 9439,
+      "attempts": 1,
+      "seconds": 0.556
+    },
+    {
+      "image_id": "d0ebbcb49cca40eab76939482e73843f__n003-2018-01-04-10-22-36+0800__CAM_FRONT__1515032765653023",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.0,
+      "pred_area": 0,
+      "gold_area": 296,
+      "attempts": 1,
+      "seconds": 0.525
+    },
+    {
+      "image_id": "e8f6662e34034be7867bc65b77754bb1__n008-2018-06-05-15-07-28-0400__CAM_BACK_LEFT__1528225821947295",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.0,
+      "pred_area": 0,
+      "gold_area": 2496,
+      "attempts": 1,
+      "seconds": 0.537
+    },
+    {
+      "image_id": "f14769a2d524464ab5581f841f13ba90__n008-2018-06-05-15-07-28-0400__CAM_BACK_RIGHT__1528225994027968",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.9218127514264728,
+      "pred_area": 384113,
+      "gold_area": 406048,
+      "attempts": 1,
+      "seconds": 0.679
+    },
+    {
+      "image_id": "fb31a93f4e654f338461d6ceb83b087c__n003-2018-01-04-10-22-36+0800__CAM_BACK_RIGHT__1515032640763933",
+      "case": "van_truck",
+      "split": "validation",
+      "iou": 0.32662011411053393,
+      "pred_area": 7972,
+      "gold_area": 23185,
+      "attempts": 1,
+      "seconds": 0.533
+    }
+  ]
+}

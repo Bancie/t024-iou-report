@@ -1,0 +1,119 @@
+{
+  "config": {
+    "mode": "live",
+    "dataset": "t024-review-set",
+    "doc_id": "nuimages",
+    "llm_provider": "modal",
+    "llm_model": "Qwen/Qwen2.5-7B-Instruct",
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "sam3_model": "facebook/sam3",
+    "max_rounds": 5,
+    "early_stop_patience": 1,
+    "k": 4,
+    "seed": 24,
+    "predictions": "sam3",
+    "split_counts": {
+      "opt": 30,
+      "validation": 30,
+      "test": 87,
+      "held_out": 117,
+      "unscored": 63,
+      "by_case": {
+        "opt": {
+          "far_small": 12,
+          "blur_rain": 0,
+          "van_truck": 18,
+          "other": 0
+        },
+        "validation": {
+          "far_small": 12,
+          "blur_rain": 0,
+          "van_truck": 18,
+          "other": 0
+        },
+        "test": {
+          "far_small": 34,
+          "blur_rain": 1,
+          "van_truck": 52,
+          "other": 0
+        },
+        "held_out": {
+          "far_small": 46,
+          "blur_rain": 1,
+          "van_truck": 70,
+          "other": 0
+        },
+        "unscored": {
+          "far_small": 0,
+          "blur_rain": 0,
+          "van_truck": 0,
+          "other": 63
+        }
+      }
+    },
+    "finished": true,
+    "finish_reason": "no improvement"
+  },
+  "timestamps": {
+    "started": "2026-10-17T15:27:13Z",
+    "exported": "2026-10-17T15:38:01Z"
+  },
+  "steps": [
+    {
+      "name": "retrieve",
+      "started": "2026-10-17T15:27:14Z",
+      "seconds": 8.401,
+      "ok": true
+    },
+    {
+      "name": "generate",
+      "started": "2026-10-17T15:27:23Z",
+      "seconds": 0.369,
+      "ok": true
+    },
+    {
+      "name": "loop",
+      "started": "2026-10-17T15:27:26Z",
+      "seconds": 45.098,
+      "ok": true
+    },
+    {
+      "name": "loop",
+      "started": "2026-10-17T15:29:20Z",
+      "seconds": 33.305,
+      "ok": true
+    },
+    {
+      "name": "select_best_validation",
+      "started": "2026-10-17T15:31:39Z",
+      "seconds": 38.051,
+      "ok": true
+    },
+    {
+      "name": "select_best_test",
+      "started": "2026-10-17T15:32:22Z",
+      "seconds": 95.383,
+      "ok": true
+    }
+  ],
+  "sam3_errors": [],
+  "qwen_errors": [],
+  "retries": {
+    "sam3": 0,
+    "qwen": 0
+  },
+  "sam3_events": [],
+  "llm_events": [
+    {
+      "kind": "qwen",
+      "ok": true,
+      "seconds": 0.788,
+      "attempts": 1,
+      "retries": 0
+    }
+  ],
+  "notes": [
+    "opt has 0 blur_rain images. IouEvaluator fills an empty case with 0.0; evaluate_set leaves that mean as null.",
+    "validation has 0 blur_rain images. IouEvaluator fills an empty case with 0.0; evaluate_set leaves that mean as null."
+  ]
+}
