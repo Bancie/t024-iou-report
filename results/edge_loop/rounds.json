@@ -1,0 +1,1582 @@
+[
+  {
+    "round": 1,
+    "query": "Summarize guideline cho class car",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032522,
+        "id": "rank-1:p.1-2",
+        "rank": 1
+      },
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-2:p.2-4",
+        "rank": 2
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.031746,
+        "id": "rank-3:p.2-3",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r01c0",
+        "angle": "personal-use",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.6868306459091102,
+          "far_small": 0.4775204006525664
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r01c1",
+        "angle": "far-small",
+        "prompt": "Describe a passenger car that is far away or small in the frame, and the mask covers the visible portion of that car.",
+        "fallback": false,
+        "clip_tokens": 25,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r01c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r01c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r01c0",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "iou": 0.6868306459091102,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r01c0",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "iou": 0.4775204006525664,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 1,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "22af7e1300d64f5488b9bba71a638f31__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005501112407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "89abaadcb6d040efa4598034ad0ce9fa__n003-2018-01-02-14-02-53+0800__CAM_BACK__1514873046781682",
+          "case": "van_truck",
+          "error_text": "van_truck shift: The mask sits beside the car. Place the mask on the visible car body."
+        },
+        {
+          "image_id": "515c653363994db896b7db8626c2dfb9__n013-2018-07-31-10-43-27+0800__CAM_BACK_RIGHT__1533005352428068",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "c25899293536463ca8af850b43eede50__n003-2018-01-04-17-14-29+0800__CAM_FRONT_LEFT__1515057313046650",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        }
+      ]
+    }
+  },
+  {
+    "round": 2,
+    "query": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck shift: The mask sits beside the car. Place the mask on the visible car body.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r02c0",
+        "angle": "personal-use",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.6868306459091102,
+          "far_small": 0.4775204006525664
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r02c1",
+        "angle": "far-small",
+        "prompt": "Describe a passenger car that is far away or small in the frame, and ensure the mask covers the visible body of that car.",
+        "fallback": false,
+        "clip_tokens": 26,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r02c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r02c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r02c0",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "iou": 0.6868306459091102,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r02c0",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "iou": 0.4775204006525664,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 2,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "22af7e1300d64f5488b9bba71a638f31__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005501112407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "89abaadcb6d040efa4598034ad0ce9fa__n003-2018-01-02-14-02-53+0800__CAM_BACK__1514873046781682",
+          "case": "van_truck",
+          "error_text": "van_truck shift: The mask sits beside the car. Place the mask on the visible car body."
+        },
+        {
+          "image_id": "515c653363994db896b7db8626c2dfb9__n013-2018-07-31-10-43-27+0800__CAM_BACK_RIGHT__1533005352428068",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "c25899293536463ca8af850b43eede50__n003-2018-01-04-17-14-29+0800__CAM_FRONT_LEFT__1515057313046650",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        }
+      ]
+    }
+  },
+  {
+    "round": 3,
+    "query": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck shift: The mask sits beside the car. Place the mask on the visible car body.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r03c0",
+        "angle": "personal-use",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.6868306459091102,
+          "far_small": 0.4775204006525664
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r03c1",
+        "angle": "far-small",
+        "prompt": "Describe a passenger car that is far away or small in the frame, and ensure the mask covers the visible body of that car.",
+        "fallback": false,
+        "clip_tokens": 26,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r03c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r03c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r03c0",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "iou": 0.6868306459091102,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r03c0",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "iou": 0.4775204006525664,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 3,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "22af7e1300d64f5488b9bba71a638f31__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005501112407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "89abaadcb6d040efa4598034ad0ce9fa__n003-2018-01-02-14-02-53+0800__CAM_BACK__1514873046781682",
+          "case": "van_truck",
+          "error_text": "van_truck shift: The mask sits beside the car. Place the mask on the visible car body."
+        },
+        {
+          "image_id": "515c653363994db896b7db8626c2dfb9__n013-2018-07-31-10-43-27+0800__CAM_BACK_RIGHT__1533005352428068",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "c25899293536463ca8af850b43eede50__n003-2018-01-04-17-14-29+0800__CAM_FRONT_LEFT__1515057313046650",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        }
+      ]
+    }
+  },
+  {
+    "round": 4,
+    "query": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck shift: The mask sits beside the car. Place the mask on the visible car body.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r04c0",
+        "angle": "personal-use",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.6868306459091102,
+          "far_small": 0.4775204006525664
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r04c1",
+        "angle": "far-small",
+        "prompt": "Describe a passenger car that is far away or appears small in the frame, ensuring the mask covers the visible body of the car completely.",
+        "fallback": false,
+        "clip_tokens": 27,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r04c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r04c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r04c0",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "iou": 0.6868306459091102,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r04c0",
+        "prompt": "a personal passenger car, sedan, hatchback, wagon, van, or SUV",
+        "iou": 0.4775204006525664,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 4,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "22af7e1300d64f5488b9bba71a638f31__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005501112407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "89abaadcb6d040efa4598034ad0ce9fa__n003-2018-01-02-14-02-53+0800__CAM_BACK__1514873046781682",
+          "case": "van_truck",
+          "error_text": "van_truck shift: The mask sits beside the car. Place the mask on the visible car body."
+        },
+        {
+          "image_id": "515c653363994db896b7db8626c2dfb9__n013-2018-07-31-10-43-27+0800__CAM_BACK_RIGHT__1533005352428068",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "c25899293536463ca8af850b43eede50__n003-2018-01-04-17-14-29+0800__CAM_FRONT_LEFT__1515057313046650",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        }
+      ]
+    }
+  },
+  {
+    "round": 5,
+    "query": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck shift: The mask sits beside the car. Place the mask on the visible car body.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r05c0",
+        "angle": "personal-use",
+        "prompt": "A personal passenger car, such as a sedan, hatchback, wagon, or SUV, including a car that is far away or small.",
+        "fallback": false,
+        "clip_tokens": 27,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.57163670186841,
+          "far_small": 0.41983763806410396
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r05c1",
+        "angle": "far-small",
+        "prompt": "Describe a passenger car that is far away or small in the frame, and ensure the mask covers the visible body of the car.",
+        "fallback": false,
+        "clip_tokens": 26,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r05c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r05c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r05c0",
+        "prompt": "A personal passenger car, such as a sedan, hatchback, wagon, or SUV, including a car that is far away or small.",
+        "iou": 0.57163670186841,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r05c0",
+        "prompt": "A personal passenger car, such as a sedan, hatchback, wagon, or SUV, including a car that is far away or small.",
+        "iou": 0.41983763806410396,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 5,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "0f544483a5194d72a16e165fdc69a690__n013-2018-07-31-10-43-27+0800__CAM_FRONT_LEFT__1533005079604825",
+          "case": "van_truck",
+          "error_text": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "3d16eecf6ea44d198cbe094078caad0e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514874306833158",
+          "case": "van_truck",
+          "error_text": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "89abaadcb6d040efa4598034ad0ce9fa__n003-2018-01-02-14-02-53+0800__CAM_BACK__1514873046781682",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "22af7e1300d64f5488b9bba71a638f31__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005501112407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "3eccb0752e134c4b98e01b4f477eac0c__n003-2018-01-02-14-02-53+0800__CAM_FRONT_LEFT__1514873767171083",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "515c653363994db896b7db8626c2dfb9__n013-2018-07-31-10-43-27+0800__CAM_BACK_RIGHT__1533005352428068",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "c25899293536463ca8af850b43eede50__n003-2018-01-04-17-14-29+0800__CAM_FRONT_LEFT__1515057313046650",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        }
+      ]
+    }
+  },
+  {
+    "round": 6,
+    "query": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nvan_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nvan_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r06c0",
+        "angle": "personal-use",
+        "prompt": "A personal passenger car such as a sedan, hatchback, or SUV, including a distant or small car.",
+        "fallback": false,
+        "clip_tokens": 21,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.7484901366541102,
+          "far_small": 0.5764066760483569
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r06c1",
+        "angle": "far-small",
+        "prompt": "A personal passenger car, such as a sedan, hatchback, or wagon, visible even if far away or small.",
+        "fallback": false,
+        "clip_tokens": 23,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.2409831195882203,
+          "far_small": 0.07425173216640017
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r06c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r06c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r06c0",
+        "prompt": "A personal passenger car such as a sedan, hatchback, or SUV, including a distant or small car.",
+        "iou": 0.7484901366541102,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r06c0",
+        "prompt": "A personal passenger car such as a sedan, hatchback, or SUV, including a distant or small car.",
+        "iou": 0.5764066760483569,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 6,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "3eccb0752e134c4b98e01b4f477eac0c__n003-2018-01-02-14-02-53+0800__CAM_FRONT_LEFT__1514873767171083",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        }
+      ]
+    }
+  },
+  {
+    "round": 7,
+    "query": "van_truck miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r07c0",
+        "angle": "personal-use",
+        "prompt": "A personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "fallback": false,
+        "clip_tokens": 20,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.7533069740729789,
+          "far_small": 0.6702813415834542
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r07c1",
+        "angle": "far-small",
+        "prompt": "a far or small passenger car, with the visible body covered",
+        "fallback": true,
+        "clip_tokens": 12,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.664553060755294,
+          "far_small": 0.5322234254453903
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r07c2",
+        "angle": "cargo-boundary",
+        "prompt": "A personal passenger car such as a sedan or SUV, including those that are far away or small in the frame.",
+        "fallback": false,
+        "clip_tokens": 23,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.36721208357880747,
+          "far_small": 0.29416994436928273
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r07c3",
+        "angle": "tight-body",
+        "prompt": "A personal passenger car such as a sedan, coupe, or compact, including a distant or small car.",
+        "fallback": false,
+        "clip_tokens": 21,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.6679172714854873,
+          "far_small": 0.41890956509592403
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r07c0",
+        "prompt": "A personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "iou": 0.7533069740729789,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r07c0",
+        "prompt": "A personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "iou": 0.6702813415834542,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 7,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        }
+      ]
+    }
+  },
+  {
+    "round": 8,
+    "query": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r08c0",
+        "angle": "personal-use",
+        "prompt": "Describe a personal-use vehicle like a sedan, hatchback, or SUV, including distant or small cars.",
+        "fallback": false,
+        "clip_tokens": 21,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.4015454358975736,
+          "far_small": 0.18241870148732894
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r08c1",
+        "angle": "far-small",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "fallback": false,
+        "clip_tokens": 21,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.7017532356177749,
+          "far_small": 0.5735062155708028
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r08c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r08c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 1,
+        "label": "r08c1",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "iou": 0.7017532356177749,
+        "angle": "far-small"
+      },
+      "far_small": {
+        "slot": 1,
+        "label": "r08c1",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "iou": 0.5735062155708028,
+        "angle": "far-small"
+      }
+    },
+    "feedback": {
+      "prompt_version": 8,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "22af7e1300d64f5488b9bba71a638f31__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005501112407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "533b9d860b204f4d90a4d3dc7a154c1a__n013-2018-07-31-10-43-27+0800__CAM_BACK__1533005194787005",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "89abaadcb6d040efa4598034ad0ce9fa__n003-2018-01-02-14-02-53+0800__CAM_BACK__1514873046781682",
+          "case": "van_truck",
+          "error_text": "van_truck shift: The mask sits beside the car. Place the mask on the visible car body."
+        },
+        {
+          "image_id": "3eccb0752e134c4b98e01b4f477eac0c__n003-2018-01-02-14-02-53+0800__CAM_FRONT_LEFT__1514873767171083",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        }
+      ]
+    }
+  },
+  {
+    "round": 9,
+    "query": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck shift: The mask sits beside the car. Place the mask on the visible car body.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r09c0",
+        "angle": "personal-use",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "fallback": false,
+        "clip_tokens": 21,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.7017532356177749,
+          "far_small": 0.5735062155708028
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r09c1",
+        "angle": "far-small",
+        "prompt": "Describe a passenger car that is far away or small in the frame, ensuring the mask covers the full visible body of the vehicle.",
+        "fallback": false,
+        "clip_tokens": 26,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r09c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r09c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r09c0",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "iou": 0.7017532356177749,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r09c0",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "iou": 0.5735062155708028,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 9,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "22af7e1300d64f5488b9bba71a638f31__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005501112407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "533b9d860b204f4d90a4d3dc7a154c1a__n013-2018-07-31-10-43-27+0800__CAM_BACK__1533005194787005",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "89abaadcb6d040efa4598034ad0ce9fa__n003-2018-01-02-14-02-53+0800__CAM_BACK__1514873046781682",
+          "case": "van_truck",
+          "error_text": "van_truck shift: The mask sits beside the car. Place the mask on the visible car body."
+        },
+        {
+          "image_id": "3eccb0752e134c4b98e01b4f477eac0c__n003-2018-01-02-14-02-53+0800__CAM_FRONT_LEFT__1514873767171083",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        }
+      ]
+    }
+  },
+  {
+    "round": 10,
+    "query": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.\nvan_truck shift: The mask sits beside the car. Place the mask on the visible car body.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small.\nfar_small fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car.",
+    "retrieval_path": "doc-rag",
+    "chunks": [
+      {
+        "text": "collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult to identify. Top Attributes In nuImages, each object comes with a box, a mask and a set of attributes. The following attributes are in addition to the existing ones in nuScenes): | Attribute | Short Description | | --- | --- | | vehicle_light.emergency.ﬂashing | The emergency lights on the vehicle are ﬂashing. | | vehicle_light.emergency.not_ﬂashing | The emergency lights on the vehicle are not ﬂashing. | | vertical_position.oﬀ_ground | The object is not in the ground (e.g. it is ﬂying, falling, jumping or positioned in a tree or on a vehicle). | | vertical_position.on_ground | The object is on the ground plane. | Top Surfaces nuImages includes surface classes as well: | Label | Short Description | | --- | --- | | ﬂat.driveable_surface | All paved or unpaved surfaces that a car can drive on with no concern of traﬃc rules. | | vehicle.ego | The vehicle on which the sensors are mounted, that are sometimes visible at the bottom of the image. | 1. ﬂat.driveable_surface 2. vehicle.ego Semantic Segmentation General Instructions Only annotate a surface if its length and width are both greater than 20 pixels. Annotations should tightly bound the edges of the area(s) of interest. If two areas/objects of interest are adjacent to each other, there should be no gap between the two annotations. Annotate a surface only as far as it is clearly visible. If a surface is occluded (e.g. by branches, trees, fence poles), only annotate the visible areas (which are more than 20 pixels in length and width). If a surface is covered by dirt or snow of less than 20 cm in height, include the dirt or snow in the annotation (since it can be safely driven over). If a surface has puddles in it, always include them in the annotation. Do not annotate reﬂections of surfaces. Detailed Instructions ﬂat.driveable_surface Include surfaces blocked by road blockers or pillars as long as they are the same surface as the driveable surface. Top",
+        "source": "p.2-4",
+        "score": 0.032522,
+        "id": "rank-1:p.2-4",
+        "rank": 1
+      },
+      {
+        "text": "(leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the bounding box using a polygon. Each pixel on the image should be assigned to at most one object instance (i.e. the polygons should not overlap). There should not be a discrepancy of more than 2 pixels between the edge of the object instance and the polygon. If an object is occluded by another object whose width is less than 5 pixels (e.g. a thin fence), then the external object can be included in the polygon. If an object is loosely covered by another object (e.g. branches, bushes), do not create several polygons for visible areas that are less than 15 pixels in diameter. If an object enclosed by the bounding box is occluded by another foreground object but has a visible area through a glass window (like for cars / vans / trucks), do not create a polygon on that visible area. If an object has a visible area through a hole of another foreground object, create a polygon on the visible area. Exemptions would be holes from bicycle / motorcycles / bike racks and holes that are less than 15 pixels diameter. If a static / moveable object has another object attached to it (signboard, rope), include it in the annotation. If parts of an object are not visible due to lighting and / or shadow, it is best to have an educated guess on the non-visible areas of the object. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. Detailed Instructions vehicle.* Include extremities (e.g. side view mirrors, taxi heads, police sirens, etc.); exceptions are the crane arms on construction vehicles. static_object.bicycle_rack All bicycles in a bicycle rack should be annotated collectively as bicycle rack. Note: A previous version of this taxonomy did not include bicycle racks and therefore some images are missing bicycle rack annotations. We leave this class in the dataset, as it is merely an ignore label. The ignore label is used to avoid punishing false positives or false negatives on bicycle racks, where individual bicycles are diﬃcult",
+        "source": "p.2-3",
+        "score": 0.032266,
+        "id": "rank-2:p.2-3",
+        "rank": 2
+      },
+      {
+        "text": "nuImages annotator instructions Text rendering of the oﬃcial nuImages Markdown guideline for doc-rag. Example images are omitted. nuImages Annotator Instructions Overview Introduction Objects Bounding Boxes Instance Segmentation Attributes Surfaces Semantic Segmentation Introduction In nuImages, we annotate objects with 2d boxes, instance masks and 2d segmentation masks. All the labels and attributes from nuScenes are carried over into nuImages. We have also added more attributes in nuImages. For segmentation, we have included \"stuﬀ\" (background) classes. Objects nuImages contains the same object classes as nuScenes, while the attributes are a superset of the attributes in nuScenes. Bounding Boxes General Instructions Draw bounding boxes around all objects that are in the list of object classes. Do not apply more than one box to a single object. If an object is occluded, then draw the bounding box to include the occluded part of the object according to your best guess. If an object is cut oﬀ at the edge of the image, then the bounding box should stop at the image boundary. If an object is reﬂected clearly in a glass window, then the reﬂection should be annotated. If an object has extremities, the bounding box should include all the extremities (exceptions are the side view mirrors and antennas of vehicles). Note that this diﬀers from how the instance masks are annotated, in which the extremities are included in the masks. Only label objects if the object is clear enough to be certain of what it is. If an object is so blurry it cannot be known, do not label the object. Do not label an object if its height is less than 10 pixels. Do not label an object if its less than 20% visible, unless you can conﬁdently tell what the object is. An object can have low visibility when it is occluded or cut oﬀ by the image. The clarity and orientation of the object does not inﬂuence its visibility. Detailed Instructions human.pedestrian.* In nighttime images, annotate the pedestrian only when either the body part(s) of a person is clearly visible (leg, arm, head etc.), or the person is clearly in motion. vehicle.* In nighttime images, annotate a vehicle only when a pair of lights is clearly visible (break or head or hazard lights), and it is clearly on the road surface. Top Instance Segmentation General Instructions Given a bounding box, outline the visible parts of the object enclosed within the",
+        "source": "p.1-2",
+        "score": 0.032002,
+        "id": "rank-3:p.1-2",
+        "rank": 3
+      }
+    ],
+    "candidates": [
+      {
+        "slot": 0,
+        "label": "r10c0",
+        "angle": "personal-use",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "fallback": false,
+        "clip_tokens": 21,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.7017532356177749,
+          "far_small": 0.5735062155708028
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 1,
+        "label": "r10c1",
+        "angle": "far-small",
+        "prompt": "Describe a passenger car, whether far away or small in the frame, ensuring the mask covers the entire visible body.",
+        "fallback": false,
+        "clip_tokens": 23,
+        "attempts": 2,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 2,
+        "label": "r10c2",
+        "angle": "cargo-boundary",
+        "prompt": "a personal passenger car next to a pickup truck or a cargo truck",
+        "fallback": true,
+        "clip_tokens": 13,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.0,
+          "far_small": 0.0
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      },
+      {
+        "slot": 3,
+        "label": "r10c3",
+        "angle": "tight-body",
+        "prompt": "one tight mask on a sedan, a personal van, and a distant car",
+        "fallback": true,
+        "clip_tokens": 15,
+        "attempts": 1,
+        "iou_by_case": {
+          "van_truck": 0.29980023591057203,
+          "far_small": 0.07485709482178883
+        },
+        "n_by_case": {
+          "van_truck": 18,
+          "far_small": 12
+        }
+      }
+    ],
+    "winners": {
+      "van_truck": {
+        "slot": 0,
+        "label": "r10c0",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "iou": 0.7017532356177749,
+        "angle": "personal-use"
+      },
+      "far_small": {
+        "slot": 0,
+        "label": "r10c0",
+        "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+        "iou": 0.5735062155708028,
+        "angle": "personal-use"
+      }
+    },
+    "feedback": {
+      "prompt_version": 10,
+      "reviewer": "edge-loop",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "b2cfb7ad48f34ea39d3a6f195fa898ed__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005193512407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "22af7e1300d64f5488b9bba71a638f31__n013-2018-07-31-10-43-27+0800__CAM_FRONT__1533005501112407",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "533b9d860b204f4d90a4d3dc7a154c1a__n013-2018-07-31-10-43-27+0800__CAM_BACK__1533005194787005",
+          "case": "van_truck",
+          "error_text": "van_truck fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        },
+        {
+          "image_id": "89abaadcb6d040efa4598034ad0ce9fa__n003-2018-01-02-14-02-53+0800__CAM_BACK__1514873046781682",
+          "case": "van_truck",
+          "error_text": "van_truck shift: The mask sits beside the car. Place the mask on the visible car body."
+        },
+        {
+          "image_id": "3eccb0752e134c4b98e01b4f477eac0c__n003-2018-01-02-14-02-53+0800__CAM_FRONT_LEFT__1514873767171083",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "cfc02be8f0784f64ad70fb8d08b331b6__n003-2018-01-02-14-02-53+0800__CAM_FRONT_RIGHT__1514874254879318",
+          "case": "far_small",
+          "error_text": "far_small miss: The passenger car is missed. Cover the visible car body, including a car that is far away or small."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "far_small fragment: The mask covers only a fragment of the car. Cover the full visible body, including a distant or small car."
+        }
+      ]
+    }
+  }
+]
