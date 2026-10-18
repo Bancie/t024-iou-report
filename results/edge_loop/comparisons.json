@@ -1,0 +1,128 @@
+{
+  "validation": {
+    "van_truck": {
+      "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+      "n": 18,
+      "final": {
+        "n": 18,
+        "mean": 0.783091172834053,
+        "ci_low": 0.645406039977467,
+        "ci_high": 0.8971607338297317,
+        "draws": 2000,
+        "seed": 24,
+        "alpha": 0.05
+      },
+      "baseline": {
+        "n": 18,
+        "mean": 0.7771669567787689,
+        "ci_low": 0.6273957131231565,
+        "ci_high": 0.9058299188456953,
+        "draws": 2000,
+        "seed": 25,
+        "alpha": 0.05
+      },
+      "delta": {
+        "n": 18,
+        "mean": 0.0059242160552841665,
+        "ci_low": -0.0913963625627207,
+        "ci_high": 0.11926393781105059,
+        "draws": 2000,
+        "seed": 26,
+        "alpha": 0.05
+      }
+    },
+    "far_small": {
+      "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+      "n": 12,
+      "final": {
+        "n": 12,
+        "mean": 0.8852599206839992,
+        "ci_low": 0.843803524133791,
+        "ci_high": 0.9216681292886973,
+        "draws": 2000,
+        "seed": 34,
+        "alpha": 0.05
+      },
+      "baseline": {
+        "n": 12,
+        "mean": 0.893117575202138,
+        "ci_low": 0.849780927402278,
+        "ci_high": 0.9310459973688952,
+        "draws": 2000,
+        "seed": 35,
+        "alpha": 0.05
+      },
+      "delta": {
+        "n": 12,
+        "mean": -0.007857654518138893,
+        "ci_low": -0.027168389414740746,
+        "ci_high": 0.012908043045508235,
+        "draws": 2000,
+        "seed": 36,
+        "alpha": 0.05
+      }
+    }
+  },
+  "other": {
+    "van_truck": {
+      "n": 63,
+      "final": {
+        "n": 63,
+        "mean": 0.7899310643455053,
+        "ci_low": 0.708193411531846,
+        "ci_high": 0.8673169544369277,
+        "draws": 2000,
+        "seed": 44,
+        "alpha": 0.05
+      },
+      "baseline": {
+        "n": 63,
+        "mean": 0.8591339394193984,
+        "ci_low": 0.791389092983032,
+        "ci_high": 0.9198492708291428,
+        "draws": 2000,
+        "seed": 45,
+        "alpha": 0.05
+      },
+      "delta": {
+        "n": 63,
+        "mean": -0.06920287507389301,
+        "ci_low": -0.12386123417850267,
+        "ci_high": -0.02415875179052352,
+        "draws": 2000,
+        "seed": 46,
+        "alpha": 0.05
+      }
+    },
+    "far_small": {
+      "n": 63,
+      "final": {
+        "n": 63,
+        "mean": 0.7899310643455053,
+        "ci_low": 0.7054831846072,
+        "ci_high": 0.867499009315295,
+        "draws": 2000,
+        "seed": 54,
+        "alpha": 0.05
+      },
+      "baseline": {
+        "n": 63,
+        "mean": 0.8591339394193984,
+        "ci_low": 0.7922051897389326,
+        "ci_high": 0.9157915644568493,
+        "draws": 2000,
+        "seed": 55,
+        "alpha": 0.05
+      },
+      "delta": {
+        "n": 63,
+        "mean": -0.06920287507389301,
+        "ci_low": -0.12657942858870078,
+        "ci_high": -0.024457647851307683,
+        "draws": 2000,
+        "seed": 56,
+        "alpha": 0.05
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "role": "opt-van_truck-low",
+    "file": "overlays/01-opt-van_truck-low.jpg",
+    "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+    "case": "van_truck",
+    "split": "opt",
+    "iou": 0.15642023346303502,
+    "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+    "bytes": 30919,
+    "width": 640
+  },
+  {
+    "role": "validation-van_truck-median",
+    "file": "overlays/02-validation-van_truck-median.jpg",
+    "image_id": "f14769a2d524464ab5581f841f13ba90__n008-2018-06-05-15-07-28-0400__CAM_BACK_RIGHT__1528225994027968",
+    "case": "van_truck",
+    "split": "validation",
+    "iou": 0.9172428063683724,
+    "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+    "bytes": 20455,
+    "width": 640
+  },
+  {
+    "role": "opt-far_small-low",
+    "file": "overlays/03-opt-far_small-low.jpg",
+    "image_id": "3eccb0752e134c4b98e01b4f477eac0c__n003-2018-01-02-14-02-53+0800__CAM_FRONT_LEFT__1514873767171083",
+    "case": "far_small",
+    "split": "opt",
+    "iou": 0.0,
+    "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+    "bytes": 34996,
+    "width": 640
+  },
+  {
+    "role": "validation-far_small-median",
+    "file": "overlays/04-validation-far_small-median.jpg",
+    "image_id": "a0f7494834bd493c86388fb3e9d47d26__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226429187570",
+    "case": "far_small",
+    "split": "validation",
+    "iou": 0.9108034331686877,
+    "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+    "bytes": 27859,
+    "width": 640
+  },
+  {
+    "role": "other-median",
+    "file": "overlays/05-other-median.jpg",
+    "image_id": "990551c2173242d68ef4950ca7717fb2__n003-2018-01-02-14-02-53+0800__CAM_FRONT__1514873993656110",
+    "case": "other",
+    "split": "other",
+    "iou": 0.9427716565349544,
+    "prompt": "Describe a personal passenger car such as a sedan, hatchback, or SUV, including distant or small cars.",
+    "bytes": 22036,
+    "width": 640
+  }
+]
