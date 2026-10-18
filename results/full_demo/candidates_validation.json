@@ -1,0 +1,56 @@
+[
+  {
+    "label": "P1",
+    "kind": "candidate",
+    "version": 1,
+    "prompt": "car",
+    "yaml": "version: 1\nclass: car\ntype: mask\nprompt: car\n",
+    "mean_iou": 0.8235472041481166,
+    "iou_by_case": {
+      "far_small": 0.893117575202138,
+      "blur_rain": null,
+      "van_truck": 0.7771669567787689
+    },
+    "n": 30,
+    "n_failed": 0,
+    "n_iou_zero": 1,
+    "reused": false,
+    "failures": []
+  },
+  {
+    "label": "P2",
+    "kind": "candidate",
+    "version": 2,
+    "prompt": "car",
+    "yaml": "version: 2\nclass: car\ntype: mask\nprompt: car\n",
+    "mean_iou": 0.8235472041481166,
+    "iou_by_case": {
+      "far_small": 0.893117575202138,
+      "blur_rain": null,
+      "van_truck": 0.7771669567787689
+    },
+    "n": 30,
+    "n_failed": 0,
+    "n_iou_zero": 1,
+    "reused": true,
+    "failures": []
+  },
+  {
+    "label": "baseline",
+    "kind": "baseline",
+    "version": null,
+    "prompt": "passenger car",
+    "yaml": "version: 0\nclass: car\ntype: mask\nprompt: passenger car\n",
+    "mean_iou": 0.7322533847744129,
+    "iou_by_case": {
+      "far_small": 0.8242860926107624,
+      "blur_rain": null,
+      "van_truck": 0.6708982462168467
+    },
+    "n": 30,
+    "n_failed": 0,
+    "n_iou_zero": 4,
+    "reused": false,
+    "failures": []
+  }
+]

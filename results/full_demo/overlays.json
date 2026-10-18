@@ -1,0 +1,56 @@
+[
+  {
+    "file": "overlays/01-validation-best.png",
+    "image_id": "937502d3c9f749ab8c19f2fc45c5e24a__n013-2018-08-20-11-35-39+0800__CAM_FRONT_RIGHT__1534736735170176",
+    "split": "validation",
+    "label": "P1",
+    "tag": "validation-best",
+    "iou": 0.9827719096793476,
+    "bytes": 106627
+  },
+  {
+    "file": "overlays/02-validation-median.png",
+    "image_id": "a0f7494834bd493c86388fb3e9d47d26__n008-2018-06-05-15-07-28-0400__CAM_BACK__1528226429187570",
+    "split": "validation",
+    "label": "P1",
+    "tag": "validation-median",
+    "iou": 0.923348118153731,
+    "bytes": 82502
+  },
+  {
+    "file": "overlays/03-validation-worst.png",
+    "image_id": "d0ebbcb49cca40eab76939482e73843f__n003-2018-01-04-10-22-36+0800__CAM_FRONT__1515032765653023",
+    "split": "validation",
+    "label": "P1",
+    "tag": "validation-worst",
+    "iou": 0.0,
+    "bytes": 90428
+  },
+  {
+    "file": "overlays/04-test-best.png",
+    "image_id": "d3b1ee1e37224b5d9c3efc1dfba9711a__n009-2018-07-12-16-12-53-0400__CAM_FRONT_RIGHT__1531427402920283",
+    "split": "test",
+    "label": "P1",
+    "tag": "test-best",
+    "iou": 0.9794407870535228,
+    "bytes": 88076
+  },
+  {
+    "file": "overlays/05-test-median.png",
+    "image_id": "bbd882de478f4501b0dd8bf7d17504a0__n013-2018-08-02-13-40-47+0800__CAM_FRONT__1533189074262407",
+    "split": "test",
+    "label": "P1",
+    "tag": "test-median",
+    "iou": 0.8299671119864732,
+    "bytes": 96287
+  },
+  {
+    "file": "overlays/06-test-worst.png",
+    "image_id": "0ce967cb7aae4772824ffc1079ef16aa__n016-2018-07-03-14-42-34+0800__CAM_FRONT__1530600303412515",
+    "split": "test",
+    "label": "P1",
+    "tag": "test-worst",
+    "iou": 0.0,
+    "bytes": 106547
+  }
+]

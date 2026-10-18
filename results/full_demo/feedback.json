@@ -1,0 +1,37 @@
+{
+  "author": "LLM agent playing Chi (simulated human feedback)",
+  "rounds": [
+    {
+      "prompt_version": 1,
+      "reviewer": "Chi",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "The blue mask only covers fragments of the vehicles behind the fence and the tree. The green gold outline is larger (pred 8641 px versus gold 12295 px), so the lower and side parts of those cars are missed."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "On the left, the blue mask spills past the green outline onto the railing beside the cars. The rightmost car is only partly covered, so that car is missed while the nearer masks leak."
+        }
+      ]
+    },
+    {
+      "prompt_version": 2,
+      "reviewer": "Chi",
+      "items": [
+        {
+          "image_id": "51fd60491b854443a875cb17b196a18e__n003-2018-01-02-14-02-53+0800__CAM_BACK_LEFT__1514873599305854",
+          "case": "van_truck",
+          "error_text": "Same miss as before: the blue mask is still only fragments on the vehicles behind the fence, and the green outline extends below and beside those blobs. Pred area stays 8641 px against gold 12295 px."
+        },
+        {
+          "image_id": "5a2ed6c246404319baaed6f073255bc0__n003-2018-01-02-14-02-53+0800__CAM_BACK_RIGHT__1514873861028347",
+          "case": "far_small",
+          "error_text": "The left cars still leak blue past the green outline onto the railing, and the rightmost car is still only partly filled. Pred 18358 px versus gold 17358 px."
+        }
+      ]
+    }
+  ]
+}

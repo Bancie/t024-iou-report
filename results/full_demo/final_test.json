@@ -1,0 +1,34 @@
+{
+  "best_label": "P1",
+  "locked": true,
+  "best": {
+    "label": "P1",
+    "prompt": "car",
+    "yaml": "version: 1\nclass: car\ntype: mask\nprompt: car\n",
+    "mean_iou": 0.7262671702546304,
+    "iou_by_case": {
+      "far_small": 0.6622464148452324,
+      "blur_rain": 0.9618206590728298,
+      "van_truck": 0.7635970201604253
+    },
+    "n": 87,
+    "n_failed": 0,
+    "n_iou_zero": 8,
+    "failures": []
+  },
+  "baseline": {
+    "label": "baseline",
+    "prompt": "passenger car",
+    "yaml": "version: 0\nclass: car\ntype: mask\nprompt: passenger car\n",
+    "mean_iou": 0.5744715341863127,
+    "iou_by_case": {
+      "far_small": 0.4691485566328282,
+      "blur_rain": 0.9535574210709112,
+      "van_truck": 0.636046444761964
+    },
+    "n": 87,
+    "n_failed": 0,
+    "n_iou_zero": 24,
+    "failures": []
+  }
+}
