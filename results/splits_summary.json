@@ -1,0 +1,107 @@
+{
+  "seed": 24,
+  "opt_size": 30,
+  "validation_size": 30,
+  "split_by": "log",
+  "generated_by": "gdp-data resplit",
+  "dataset": "t024-review-set",
+  "counts": {
+    "opt": {
+      "far_small": 12,
+      "blur_rain": 0,
+      "van_truck": 18,
+      "other": 0
+    },
+    "validation": {
+      "far_small": 12,
+      "blur_rain": 0,
+      "van_truck": 18,
+      "other": 0
+    },
+    "test": {
+      "far_small": 34,
+      "blur_rain": 1,
+      "van_truck": 52,
+      "other": 0
+    },
+    "held_out": {
+      "far_small": 46,
+      "blur_rain": 1,
+      "van_truck": 70,
+      "other": 0
+    },
+    "unscored": {
+      "far_small": 0,
+      "blur_rain": 0,
+      "van_truck": 0,
+      "other": 63
+    }
+  },
+  "imbalance": {
+    "n_scored": 147,
+    "requested_opt_size": 30,
+    "requested_validation_size": 30,
+    "target_totals": {
+      "opt": 30,
+      "validation": 30,
+      "test": 87
+    },
+    "targets": {
+      "opt": {
+        "far_small": 12,
+        "blur_rain": 0,
+        "van_truck": 18
+      },
+      "validation": {
+        "far_small": 12,
+        "blur_rain": 0,
+        "van_truck": 18
+      },
+      "test": {
+        "far_small": 34,
+        "blur_rain": 1,
+        "van_truck": 52
+      }
+    },
+    "actual": {
+      "opt": {
+        "far_small": 12,
+        "blur_rain": 0,
+        "van_truck": 18
+      },
+      "validation": {
+        "far_small": 12,
+        "blur_rain": 0,
+        "van_truck": 18
+      },
+      "test": {
+        "far_small": 34,
+        "blur_rain": 1,
+        "van_truck": 52
+      }
+    },
+    "delta": {
+      "opt": {
+        "far_small": 0,
+        "blur_rain": 0,
+        "van_truck": 0
+      },
+      "validation": {
+        "far_small": 0,
+        "blur_rain": 0,
+        "van_truck": 0
+      },
+      "test": {
+        "far_small": 0,
+        "blur_rain": 0,
+        "van_truck": 0
+      }
+    },
+    "max_abs_delta": 0
+  },
+  "n_opt": 30,
+  "n_validation": 30,
+  "n_test": 87,
+  "n_unscored": 63,
+  "n_held_out": 117
+}
